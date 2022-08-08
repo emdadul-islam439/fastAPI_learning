@@ -1,6 +1,5 @@
 anyio==3.6.1
 appdirs==1.4.3
-apturl==0.5.2
 asttokens==2.0.5
 attrs==22.1.0
 Automat==20.2.0
