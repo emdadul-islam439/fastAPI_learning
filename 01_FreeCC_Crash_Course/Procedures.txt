@@ -63,3 +63,12 @@
                 age : int
                 year : str
 
+
+## Creating PUT API:
+    * use "@app.put(...), rest is the same 
+        -> @app.put("/update-student/{student_id}")
+    * Because of the convention, user can update only one field of an entire object. So, keep the "UpdateStudent" class's fields as 'optional'
+        -> class UpdateStudent(BaseModel):
+                Name : Optional[str]
+                age : Optional[int]
+                year : Optional[str]

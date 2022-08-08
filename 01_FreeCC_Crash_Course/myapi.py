@@ -1,3 +1,4 @@
+from typing import Optional
 from fastapi import FastAPI, Path
 from pydantic import BaseModel
 
@@ -21,6 +22,12 @@ class Student(BaseModel):
     Name : str
     age : int
     year : str
+
+
+class UpdateStudent(BaseModel):
+    Name : Optional[str] = None
+    age : Optional[int] = None
+    year : Optional[str] = None
 
 
 # api end-point without any parameter
@@ -80,3 +87,18 @@ def create_student(student_id: int, student: Student):
     students[student_id] = student
     return students[student_id]
 
+@app.put("/update-student/{student_id}")
+def update_student(student_id: int, student: UpdateStudent):
+    if student_id not in students:
+        return { "Error" : "Student ID not found" }
+
+    if student.Name != None:
+        students[student_id]['Name'] = student.Name
+
+    if student.age != None:
+        students[student_id]['age'] = student.age
+    
+    if student.year != None:
+        students[student_id]['year'] = student.year
+
+    return students[student_id]
