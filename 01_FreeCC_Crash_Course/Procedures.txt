@@ -76,3 +76,12 @@
 ## Creating DELETE API:
     * just use "@app.delete(...)", rest is the same
         -> @app.delete("/delte-student/{student_id}")
+
+
+## DEPLOYMENT: deploy to HEROKU:
+    * first create a file without extension named-> Procfile
+        -> just write "web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker myapi:app"
+    * pip install gunicorn
+    * auto generate a txt file with all the dependencies
+        -> pip freeze > requirements.txt
+    * To be added...
