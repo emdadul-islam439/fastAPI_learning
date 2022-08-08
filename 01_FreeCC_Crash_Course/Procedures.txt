@@ -23,3 +23,12 @@
         -> can't access anything from browser
     * From the "http://127.0.0.1:8000/docs", yes '/docs' is added:
         -> can be tested the API like POSTMAN
+## Writing PATH API:
+    * in the '@app.get()', use path-parameter
+        -> "@app.get("/get-student/{student_id}")
+        -> where 'student_id' is the dynamic parameter
+    * declare a function, and add the parameter with data-type
+        -> def get_student(student_id: int):
+    * return a dictonary:
+        -> if student_id in students: 
+            return students[student_id]
