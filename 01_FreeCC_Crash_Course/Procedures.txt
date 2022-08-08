@@ -1,0 +1,3 @@
+## Installation:
+    * install fastAPI with -> "pip install fastAPI"
+    * install Uvicorn (for server management) -> "pip install uvicorn"
