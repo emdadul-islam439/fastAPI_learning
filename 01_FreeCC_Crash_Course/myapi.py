@@ -29,3 +29,13 @@ def get_student(student_id: int = Path(None, description = "The ID of the studen
         return students[student_id]
     else:
         return {"data" : "Not found"}
+
+
+# api end-point with query-parameter
+@app.get("/get-by-name")
+def get_student(name : str):
+    for student_id in students:
+        if students[student_id]['Name'] == name:
+            return students[student_id]
+            
+    return {'data' : 'Not found'}

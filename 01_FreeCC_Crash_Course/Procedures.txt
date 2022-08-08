@@ -27,7 +27,7 @@
     * in the '@app.get()', use path-parameter
         -> "@app.get("/get-student/{student_id}")
         -> where 'student_id' is the dynamic parameter
-    * declare a function, and add the parameter with data-type
+    * declare a function, and add the 'dynamic parameter' with data-type
         -> def get_student(student_id: int):
     * return a dictonary:
         -> if student_id in students: 
@@ -35,3 +35,9 @@
     * add Path(..., ...) into the 'get_student(... , path(...)) to describe the intention:
         -> add 'Path' into the import's line -> from fastapi import FastAPI, Path
         -> def get_student(student_id: int = Path(None, description = "The ID of the student you want to view")):
+
+## Writing Query API:
+    * just don't take any dynamic parameter in the '@app.get(....)' function
+        -> @app.get("/get-by-name") [don't add any '{}' related parameter, that's it!]
+    * the rest is the same as 'path api'
+        -> def get_student(name: str):......
