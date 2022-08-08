@@ -12,5 +12,14 @@
         ->return {'name' : 'first data'}
 
 ## Start the Uvicorn:
-    * 
-        
+    * go to the project's directory by 'cd' command [other-wise the server will not start correctly]
+        -> "cd 01_FreeCC_Crash_Course"
+    * write "uvicorn <file-name>:<fastAPI-object-name> --reload" and the server will open-up
+        -> in this case written "uvicorn myapi:app --reload"
+    * after starting the server, it can be seen from the browser:
+        -> go to "http://127.0.0.1:8000" [generally given into the command-prompt instruction]
+    * For quitting from the server, press CTRL + C in the command-prompt
+        -> if pressed the server and the Browser's data will be shut-downed
+        -> can't access anything from browser
+    * From the "http://127.0.0.1:8000/docs", yes '/docs' is added:
+        -> can be tested the API like POSTMAN
