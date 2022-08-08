@@ -72,3 +72,7 @@
                 Name : Optional[str]
                 age : Optional[int]
                 year : Optional[str]
+
+## Creating DELETE API:
+    * just use "@app.delete(...)", rest is the same
+        -> @app.delete("/delte-student/{student_id}")
