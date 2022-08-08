@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Path
 
 app = FastAPI()
 
@@ -24,7 +24,7 @@ def index():
 
 # api end-point with path-parameter
 @app.get("/get-student/{student_id}")
-def get_student(student_id: int):
+def get_student(student_id: int = Path(None, description = "The ID of the student you want to view")):
     if student_id in students:
         return students[student_id]
     else:
