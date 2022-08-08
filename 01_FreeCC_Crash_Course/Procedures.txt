@@ -84,4 +84,9 @@
     * pip install gunicorn
     * auto generate a txt file with all the dependencies
         -> pip freeze > requirements.txt
-    * To be added...
+    * make sure you have pushed to 'github'
+    * enter into 'HEROKU' (if don't have account, just create one)
+    * connect to 'github'
+    * add repository, -> select branch, -> enable 'auto deploy'
+    *** IF 'HEROKU' can't install any dependency, remove it from 'requirements.txt' file
+    * That's it!! You are good to go...
