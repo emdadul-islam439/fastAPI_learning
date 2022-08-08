@@ -23,6 +23,7 @@
         -> can't access anything from browser
     * From the "http://127.0.0.1:8000/docs", yes '/docs' is added:
         -> can be tested the API like POSTMAN
+
 ## Writing PATH API:
     * in the '@app.get()', use path-parameter
         -> "@app.get("/get-student/{student_id}")
@@ -46,3 +47,7 @@
     * if there is a dynamic parameter (path variable) at the ANNOTATION part, then just add this as a function parameter
         -> @app.get("/get-by-id-and-name/{student_id}") [this ANNOTATION part has a dynamic variable-> 'student_id']
         -> def get_student(student_id: int, name: str) [added the get_student parameter into the 'get_student' function] 
+
+## Writing API with OPTIONAL parameter:
+    * just initialize variable inside the function call
+        -> def get_student(student_id: int, name: str = None) [initialized the 'name' variable into the 'get_student' function]

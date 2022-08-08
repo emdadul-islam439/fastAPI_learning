@@ -42,13 +42,24 @@ def get_student(name : str):
 
 
 # api end-point with path-parameter and query-parameter
-@app.get("/get-by-name/{student_id}")
+@app.get("/get-by-id-and-name/{student_id}")
 def get_student(student_id: int, name : str):
     if student_id in students:
         if students[student_id]['Name'] == name:
             return students[student_id] 
         else:
             return {'data' : "Name doesn't match"}  
+    else:
+        return {'data' : 'ID not found'}
+
+# path-query combined with OPTIONAL parameter
+@app.get("/get-by-id-or-name-/{student_id}")
+def get_student(student_id: int, name : str = None):
+    if student_id in students:
+        if (name == None) or (students[student_id]['Name'] == name):
+            return students[student_id] 
+        else:
+            return {'data' : "Couldn't found data"}  
     else:
         return {'data' : 'ID not found'}
 
