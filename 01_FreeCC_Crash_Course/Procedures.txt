@@ -1,3 +1,16 @@
 ## Installation:
     * install fastAPI with -> "pip install fastAPI"
     * install Uvicorn (for server management) -> "pip install uvicorn"
+
+## Creating First API:
+    * import FastAPI 
+    * create 'app' variable. in this case-> "app = FastAPI()"
+    * create first end-point. in this case
+        -> "@app.get('/')"
+        -> def index():
+    * return a json:
+        ->return {'name' : 'first data'}
+
+## Start the Uvicorn:
+    * 
+        
