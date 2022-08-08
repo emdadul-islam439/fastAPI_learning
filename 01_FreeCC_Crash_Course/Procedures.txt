@@ -51,3 +51,15 @@
 ## Writing API with OPTIONAL parameter:
     * just initialize variable inside the function call
         -> def get_student(student_id: int, name: str = None) [initialized the 'name' variable into the 'get_student' function]
+
+## Creating POST API:
+    * use "@app.post()" instead of "@app.get()" function,
+        -> @app.post("/create-student/{student_id}")
+    * rest portion is same as get method (at least in basic level)
+        -> def create_student(student_id: int, student: Student): ....
+    *** For making/storing 'Data Class', import BaseModel from pydantic
+        -> class Student(BaseModel):
+                Name : str
+                age : int
+                year : str
+
