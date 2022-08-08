@@ -41,3 +41,8 @@
         -> @app.get("/get-by-name") [don't add any '{}' related parameter, that's it!]
     * the rest is the same as 'path api'
         -> def get_student(name: str):......
+
+## Combined path-query API:
+    * if there is a dynamic parameter (path variable) at the ANNOTATION part, then just add this as a function parameter
+        -> @app.get("/get-by-id-and-name/{student_id}") [this ANNOTATION part has a dynamic variable-> 'student_id']
+        -> def get_student(student_id: int, name: str) [added the get_student parameter into the 'get_student' function] 
