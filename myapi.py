@@ -31,11 +31,9 @@ class UpdateStudent(BaseModel):
 
 
 # api end-point without any parameter
-@app.get("/")
+@app.get("/get-all-data")
 def index():
-    return {
-        "name" : "First Data"
-    }
+    return students
 
 
 
